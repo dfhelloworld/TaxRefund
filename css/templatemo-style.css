@@ -124,6 +124,10 @@ hr {
   padding-top: 50px;
   padding-bottom: 100px;
 }
+.tm-padding-top-bottom-50 {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
 .tm-work-h3 {
   color: #eb5424;
   font-size: 20px;
@@ -419,4 +423,8 @@ input { height: 50px; }
 /* add by Jeff*/
 .formInputMagin{
   margin-top: 3%;
+}
+
+.bgSectionTwo{
+  background-color: #f2f2f2;
 }

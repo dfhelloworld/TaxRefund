@@ -52,7 +52,6 @@ jQuery(document).ready(function ($) {
         });
 
     }
-
 });
 
 
@@ -93,8 +92,27 @@ $('.navbar-collapse a').click(function () {
 
 // Added By Jeff
 
- $('#dropdownMenu li').on('click', function(){
-     alert(this);
-     alert($(this));
-    $('#dropdown').html($(this).text()+'<span class="caret"></span>');
+$('.btn-group li').on('click', function () {
+    var selection = $(this).text();
+    $(this).parent().prev().html( selection+ '<span class="caret"></span>');
+    if(selection =="Yes" ){
+        $(this).parent().parent().parent().next().addClass("show"); 
+    }
+    if(selection =="No"){
+         $(this).parent().parent().parent().next().removeClass("show"); 
+    }
 });
+
+$('.form_date').datetimepicker({
+    language: 'fr',
+    weekStart: 1,
+    todayBtn: 1,
+    autoclose: 1,
+    todayHighlight: 1,
+    startView: 2,
+    minView: 2,
+    forceParse: 0
+});
+
+$('[data-toggle="checkbox"]').radiocheck();
+$('[data-toggle="radio"]').radiocheck();

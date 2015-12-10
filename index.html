@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -8,20 +8,24 @@
 	<meta name="keywords" content="">
 	<meta name="description" content="">
 	<!-- SITE TITLE -->
-	<title>Ultra Profile HTML5 Layout by templatemo</title>
+	<title>Tax Refund</title>
 
 	<!-- STYLESHEETS -->
-	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link href="css/bootstrap.css" rel="stylesheet" media="screen">
+
+	<link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
+
 	<link rel="stylesheet" href="css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/templatemo-style.css">
 	<link href="css/flat-ui.css" rel="stylesheet">
+
 </head>
 
 <body data-spy="scroll" data-target="#rock-navigation">
+
 	<!-- START NAVIGATION -->
 	<div class="navbar navbar-default bs-dos-nav navbar-fixed-top sticky-navigation" role="navigation">
 		<div class="container">
-
 			<div class="navbar-header">
 				<button class="navbar-toggle" data-toggle="collapse" data-target="#rock-navigation">
 					<span class="icon icon-bar"></span>
@@ -35,8 +39,8 @@
 					<li><a href="#home" class="smoothScroll">Home</a></li>
 					<li><a href="#stepOne" class="smoothScroll">Apply Now</a></li>
 					<!--<li><a href="#portfolio" class="smoothScroll">Portfolio</a></li>
-					<li><a href="#resume" class="smoothScroll">Resume</a></li>
-					<li><a href="#about" class="smoothScroll">About</a></li>-->
+                    <li><a href="#resume" class="smoothScroll">Resume</a></li>
+                    <li><a href="#about" class="smoothScroll">About</a></li>-->
 					<li><a href="#contact" class="smoothScroll">Contact Us</a></li>
 				</ul>
 			</nav>
@@ -44,7 +48,6 @@
 		</div>
 	</div>
 	<!-- END NAVIGATION -->
-
 	<!-- START HOME -->
 	<section id="home" class="templatemo-home">
 		<div class="container">
@@ -52,8 +55,10 @@
 				<div class="col-md-2 col-sm-1"></div>
 				<div class="col-md-8 col-sm-10">
 					<h2 class="tm-home-subtitle">Everyone need a tax agent</h2>
-					<p>Worked in the <strong>last five years?</strong> 9 out of 10 people find they’re due a tax refund. We make the process
-						easy, so you get to the fun part faster: spending your refund.</p>
+					<p>
+						Worked in the <strong>last five years?</strong> 9 out of 10 people find they’re due a tax refund. We make the process
+						easy, so you get to the fun part faster: spending your refund.
+					</p>
 					<a href="#stepOne" class="btn btn-info smoothScroll tm-view-more-btn">Apply Now</a>
 				</div>
 				<div class="col-md-2 col-sm-1"></div>
@@ -61,220 +66,426 @@
 		</div>
 	</section>
 	<!-- END HOME -->
-
 	<!-- START work -->
+
 	<section id="stepOne" class="tm-padding-top-bottom-100">
 
 		<div style="margin-left:3%;margin-right:3%">
 			<div class="row">
-				<h3 class="formInputMagin">My details and contact information</h3>
-				<p style="color:grey"> * denotes mandatory field</p>
+				<h3 class="formInputMagin">First , we need to know about you.</h3>
+				<p> * denotes mandatory field</p>
 			</div>
-			<div class="row formInputMagin">
-				<div class="col-xs-3">
-					<input type="text" id="irdNumber" class="form-control" placeholder="IRD Number *" />
-				</div>
-				<div class="col-xs-3">
-					<input type="text" id="firstName" class="form-control" placeholder="First Name *" />
-				</div>
-				<div class="col-xs-3">
-					<input type="text" id="middleName" class="form-control" placeholder="Middle Name" />
-				</div>
-				<div class="col-xs-3">
-					<input type="text" id="lastName" class="form-control" placeholder="Last Name *" />
-				</div>
-			</div>
-			<div class="row formInputMagin">
-				<div class="col-xs-4">
-					<input type="text" id="DOB" class="form-control" placeholder="Date Of Birth *(DD/MM/YY)" />
-				</div>
-				<div class="col-xs-4">
-					<input type="text" id="mobileNumber" class="form-control" placeholder="Mobile Number *" />
-				</div>
-				<div class="col-xs-4">
-					<input type="text" id="emailAddress" class="form-control" placeholder="Email Address *" />
-				</div>
-			</div>
-			<div class="row formInputMagin">
-				<div class="col-xs-4">
-					<input type="text" id="address" class="form-control" placeholder="Address *" />
-				</div>
-				<div class="col-xs-4">
-					<input type="text" id="city" class="form-control" placeholder="Suburb and City *" />
-				</div>
-				<div class="col-xs-4">
-					<input type="text" id="postCode" class="form-control" placeholder="Post Code" />
-				</div>
-			</div>
-			<div class="row formInputMagin">
-				<div class="col-xs-4">
-					<label>Photo of types *</label>
-					<div class="btn-group">
-						<button class="btn btn-inverse  dropdown-toggle" id="dropdown" type="button" data-toggle="dropdown">
-							-- Select -- <span class="caret"></span>
-						</button>
-						<ul class="dropdown-menu dropdown-menu-inverse" role="menu" id="dropdownMenu">
-							<li><a>Passport</a></li>
-							<li><a>Driver License</a></li>
-							<li><a>Other Approved Photo ID</a></li>
-						</ul>
+			<form data-toggle="validator" role="form" class="smoothScroll" action="">
+				<div class="row formInputMagin">
+					<div class="col-xs-3 form-group has-feedback">
+						<input type="text" pattern="^\d{9}$" id="irdNumber" class="form-control" placeholder="IRD Number *" required />
+						<span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+						<span class="help-block with-errors"></span>
 					</div>
-
+					<div class="col-xs-3 form-group has-feedback">
+						<input type="text" id="firstName" class="form-control" placeholder="First Name *" required />
+						<span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+						<span class="help-block with-errors"></span>
+					</div>
+					<div class="col-xs-3">
+						<input type="text" id="middleName" class="form-control" placeholder="Middle Name" />
+					</div>
+					<div class="col-xs-3 form-group has-feedback">
+						<input type="text" id="lastName" class="form-control" placeholder="Last Name *" required />
+						<span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+						<span class="help-block with-errors"></span>
+					</div>
 				</div>
-				<div class="col-xs-4">
-					<label>Upload photocopy of your photo ID *</label>
-					<input type="file" id="exampleInputFile">
+				<div class="row formInputMagin">
+					<div class="col-xs-4 form-group has-feedback">
+						<div class=" input-group date form_date" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+							<input class="form-control" placeholder="Date of Birth *" type="text" value="" required>
+							<span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+						</div>
+					</div>
+					<div class="col-xs-4  form-group has-feedback">
+						<input type="text" pattern="^[0-9]*$" id="mobileNumber" class="form-control" placeholder="Mobile Number *" required />
+						<span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+						<span class="help-block with-errors"></span>
+					</div>
+					<div class="col-xs-4  form-group has-feedback">
+						<input type="email" id="emailAddress" class="form-control" placeholder="Email Address *" required />
+						<span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+						<span class="help-block with-errors"></span>
+					</div>
 				</div>
-			</div>
-			<div style="margin-left:45%;width:100%;margin-top:2%">
-				<a href="#stepTwo" class="btn btn-info smoothScroll tm-view-more-btn" id="stepOneBtn" style="width:10%">Next</a>
-			</div>
+				<div class="row formInputMagin">
+					<div class="col-xs-4  form-group has-feedback">
+						<input type="text" id="address" class="form-control" placeholder="Address *" required />
+						<span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+						<span class="help-block with-errors"></span>
+					</div>
+					<div class="col-xs-4  form-group has-feedback">
+						<input type="text" id="city" class="form-control" placeholder="Suburb and City *" required />
+						<span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+						<span class="help-block with-errors"></span>
+					</div>
+					<div class="col-xs-4">
+						<input type="text" id="postCode" class="form-control" placeholder="Post Code" />
+					</div>
+				</div>
+				<!--<div class="row ">
+                    <div class="col-xs-4">
+                        <label>Photo of types *</label>
+                        <div class="btn-group dropdown">
+                            <button class="btn btn-inverse  dropdown-toggle" id="dropdown" type="button" data-toggle="dropdown">
+                                -- Select -- <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-inverse" role="menu" id="dropdownMenu">
+                                <li><a>Passport</a></li>
+                                <li><a>Driver License</a></li>
+                                <li><a>Other Approved Photo ID</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xs-4">
+                        <label>Upload photocopy of your photo ID *</label>
+                        <input type="file" id="exampleInputFile">
+                    </div>
+                </div>-->
+				<div style="margin-left:45%;width:100%;">
+					<a href="#stepTwo" class="btn btn-info smoothScroll tm-view-more-btn" id="stepOneBtn" style="width:10%">Next</a>
+				</div>
+			</form>
 		</div>
 	</section>
 	<!-- END work -->
 	<div class="copyrights">Collect from <a href="http://www.cssmoban.com/">手机网站模板</a></div>
 
 	<!-- START PORTFOLIO -->
-	<section id="stepTwo" class="tm-portfolio">
+	<!-- START RESUME -->
+	<section id="stepTwo" class="tm-padding-top-bottom-100 bgSectionTwo">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-12 wow bounce">
-					<div class="title">
-						<h2 class="tm-portfolio-title">My <strong>Portfolio</strong></h2>
+				<h4 class="formInputMagin">We'd like to check to make sure it's all okay with you.</h4>
+				<div class="col-md-6 col-sm-6">
+					<div style="padding-top:3%">
+						<label class="checkbox" for="talkToIRDCheckBox">
+							<input type="checkbox" data-toggle="checkbox" value="" id="talkToIRDCheckBox" required> <strong>Talk to the IRD</strong>
+							<br>
+							<br><span style=""> By ticking this box NZ Tax Refunds Ltd will act on behalf for all tax types (excluding Child Support) at Inland Revenue.</span>
+						</label>
 					</div>
+					<div style="padding-top:3%">
+						<label class="checkbox formInputMagin" for="wageInformationCheckBox">
+							<input type="checkbox" data-toggle="checkbox" value="" id="wageInformationCheckBox" required> <strong>  Find out my wages and tax information</strong>
+							<br>
+							<br><span style="">  By ticking this box I give permission for NZ Tax Refunds Ltd to obtain my information from Inland Revenue.</span>
+						</label>
+					</div>
+					<div style="padding-top:3%">
+						<label class="checkbox formInputMagin" for="updateDetailCheckBox">
+							<input type="checkbox" data-toggle="checkbox" value="" id="updateDetailCheckBox" required> <strong>Update my details</strong>
+							<br>
+							<br><span style="">
+                                By ticking this box I will be linked to NZ Tax Refunds Ltd. As my tax agent, NZ Tax Refunds Ltd will be able to update my details at Inland Revenue and will be able to access my information.
+                                Collect my IRD mail.
+                            </span>
+						</label>
+					</div>
+				</div>
+				<div class="col-md-6 col-sm-6">
+					<div style="padding-top:3%">
+						<label class="checkbox" for="collectDetailCheckBox">
+							<input type="checkbox" data-toggle="checkbox" value="" id="collectDetailCheckBox" required> <strong>Collect my IRD mail </strong>
+							<br>
+							<br><span style=""> By ticking this box I understand my tax correspondence will be sent to NZ Tax Refunds Ltd.
+                        </label>
+                    </div>
+                    <div style="padding-top:3%">
+                        <label class="checkbox" for="sortTaxChcekBox">
+                            <input type="checkbox" data-toggle="checkbox" value="" id="sortTaxChcekBox" required> <strong>Sort my tax</strong>
+                            <br>
+                            <br><span style=""> By ticking this box I authorize NZ Tax Refunds Ltd to prepare, submit, and sign tax returns and personal tax summaries on my behalf.
+                        </label>
+                    </div>
+                    <div style="padding-top:3%">
+                        <label class="checkbox" for="stopCheckBox">
+                            <input type="checkbox" data-toggle="checkbox" value="" id="stopCheckBox" required> <strong>Stop when I tell you to</strong>
+                            <br>
+                            <br><span style=""> By ticking this box I acknowledge that NZ Tax Refunds Ltd will act on my behalf until I choose to terminate this arrangement. I will contact NZ Tax Refunds Ltd and Inland Revenue to be delinked.
+                        </label>
+                    </div>
+                    <div style="padding-top:3%">
+                        <label class="checkbox" for="manageMoneyCheckBox">
+                            <input type="checkbox" data-toggle="checkbox" value="" id="manageMoneyCheckBox" required> <strong>Manage my refund money</strong>
+                            <br>
+                            <br><span style=""> By ticking this box I understand my refund will be paid into NZ Tax Refunds Ltd trust account prior to the balance being refunded to me.
+                        </label>
+                    </div>
+                </div>
+            </div> 
+			<hr style="width:100%; border-color:#bdc3c7;"/>
+            <div class="row">
+                <div class="col-xs-6">
+                    <div style="padding-top:3%">
+                        <label class="checkbox" for="acknowledgeCheckBox">
+                            <input type="checkbox" data-toggle="checkbox" value="" id="acknowledgeCheckBox" required> <strong>By ticking this box you acknowledge that the information provided in this application is true and correct, that you have read and agree to our fee structure and terms and conditions, appointing us as your tax agent.</strong>
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <div style="padding-top:3%">
+                        <label class="checkbox" for="signatureCheckBox">
+                            <input type="checkbox" data-toggle="checkbox" value="" id="signatureCheckBox" required> <strong>By ticking this box you agree this constitutes execution by electronic signature.</strong>
+                    </div>
+                </div>
+            </div>
+            <div style="margin-left:45%;width:100%;">
+                <a href="#stepThree" class="btn btn-info smoothScroll tm-view-more-btn" id="stepTwoBtn" style="width:10%">Next</a>
+            </div>
+        </div>
+    </section>
 
-					<!-- START ISO SECTION -->
-					<div class="iso-section">
-						<ul class="filter-wrapper clearfix">
-							<li><a href="#" class="opc-main-bg selected" data-filter="*">All</a></li>
-							<li><a href="#" class="opc-main-bg" data-filter=".html">HTML</a></li>
-							<li><a href="#" class="opc-main-bg" data-filter=".photoshop">Photoshop</a></li>
-							<li><a href="#" class="opc-main-bg" data-filter=".wordpress">Wordpress</a></li>
-							<li><a href="#" class="opc-main-bg" data-filter=".mobile">Mobile</a></li>
-						</ul>
-						<div class="iso-box-section">
-							<div class="iso-box-wrapper col4-iso-box">
-								<div class="iso-box html photoshop wordpress mobile col-md-3 col-sm-3 col-xs-12">
-									<div class="portfolio-thumb">
-										<img src="images/portfolio-img1.jpg" class="fluid-img" alt="portfolio img">
-										<div class="portfolio-overlay">
-											<h3 class="portfolio-item-title">UX Design</h3>
-											<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonumm.</p>
+    <!-- END RESUME -->
+
+    <section id="stepThree" class="tm-padding-top-bottom-100 ">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 wow bounce">
+                    <h2 class="tm-portfolio-title">About my tax information</h2>
+                </div>
+                <p align="center" style="color:#669966;">
+                    Please answer the following questions to help with the accuracy of your refund calculations, and all questions are mandatory.
+                    <br>(These questions relate to the last five financial years)
+                </p>
+            </div>
+            <div class="row" style="margin-top:3%">
+                <span class="col-xs-10">	1. Have you had any dependent children living with you since 1 April 2010?</span>
+							<div class="btn-group dropdown " style="margin-left:3%">
+								<button class="btn btn-inverse  dropdown-toggle" type="button" data-toggle="dropdown">
+									-- Select -- <span class="caret"></span>
+								</button>
+								<ul class="dropdown-menu dropdown-menu-inverse" role="menu" id="QOneDropdown">
+									<li><a>Yes</a></li>
+									<li><a>No</a></li>
+								</ul>
+							</div>
+					</div>
+					<div class="row" hidden>
+						<div class="col-xs-12">
+							<label>Please provide dependent's' details</label>
+							<form data-toggle="validator" role="form">
+								<div class="row">
+									<div class="col-xs-3 form-group hasfeedback">
+										<input type="text" id="dependentName" class="form-control" placeholder="Name *" required />
+										<span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+										<span class="help-block with-errors"></span>
+									</div>
+									<div class="col-xs-3 form-group hasfeedback">
+										<input type="text" pattern="^\d{9}$" id="dependentIRD" class="form-control" placeholder="IRD Number *" required />
+										<span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+										<span class="help-block with-errors"></span>
+									</div>
+									<div class="col-xs-3 form-group has-feedback">
+										<div class=" input-group date form_date" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+											<input class="form-control" id="dependentDOB" placeholder="Date of Birth *" type="text" value="" required>
+											<span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+										</div>
+									</div>
+									<div class="col-xs-3 form-group has-feedback">
+										<div class=" input-group date form_date" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+											<input class="form-control" id="dependendEndDate" placeholder="Date Care Ended *" type="text" value="" required>
+											<span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
 										</div>
 									</div>
 								</div>
-								<div class="iso-box html wordpress mobile col-md-3 col-sm-3 col-xs-12">
-									<div class="portfolio-thumb">
-										<img src="images/portfolio-img2.jpg" class="fluid-img" alt="portfolio img">
-										<div class="portfolio-overlay">
-											<h3 class="portfolio-item-title">UX Design</h3>
-											<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonumm.</p>
-										</div>
+							</form>
+						</div>
+					</div>
+					<div class="row" style="margin-top:3%">
+						<span class="col-xs-10">2. Do you have a partner or spouse?</span>
+						<div class="btn-group dropdown " style="margin-left:3%">
+							<button class="btn btn-inverse  dropdown-toggle" type="button" data-toggle="dropdown">
+								-- Select -- <span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu dropdown-menu-inverse" role="menu" id="QTwoDropdown">
+								<li><a>Yes</a></li>
+								<li><a>No</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="row" hidden>
+						<div class="col-xs-12">
+							<label>Please provide partner's details</label>
+							<form data-toggle="validator" role="form">
+								<div class="row">
+									<div class="col-xs-5 form-group hasfeedback">
+										<input type="text" id="partnerName" class="form-control" placeholder="Name *" required />
+										<span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+										<span class="help-block with-errors"></span>
+									</div>
+									<div class="col-xs-5 form-group hasfeedback">
+										<input type="text" pattern="^\d{9}$" id="partnerIRD" class="form-control" placeholder="IRD Number *" required />
+										<span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+										<span class="help-block with-errors"></span>
 									</div>
 								</div>
-								<div class="iso-box wordpress col-md-3 col-sm-3 col-xs-12">
-									<div class="portfolio-thumb">
-										<img src="images/portfolio-img3.jpg" class="fluid-img" alt="portfolio img">
-										<div class="portfolio-overlay">
-											<h3 class="portfolio-item-title">UX Design</h3>
-											<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonumm.</p>
-										</div>
+							</form>
+						</div>
+					</div>
+					<div class="row" style="margin-top:3%">
+						<span class="col-xs-10">3. Have you lived outside of NZ since 1 April 2010?</span>
+						<div class="btn-group dropdown " style="margin-left:3%">
+							<button class="btn btn-inverse  dropdown-toggle" type="button" data-toggle="dropdown">
+								-- Select -- <span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu dropdown-menu-inverse" role="menu" id="QThreeDropdown">
+								<li><a>Yes</a></li>
+								<li><a>No</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="row" hidden>
+						<div class="col-xs-12">
+							<label>Please provide details</label>
+							<div class="row ">
+								<div class="col-xs-4  form-group has-feedback">
+									<label>I arrived in New Zealand</label>
+									<div class=" input-group date form_date" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+										<input id="arriveDate" class="form-control" placeholder="DD/MM/YY" type="text" value="" required>
+										<span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
 									</div>
 								</div>
-								<div class="iso-box html mobile col-md-3 col-sm-3 col-xs-12">
-									<div class="portfolio-thumb">
-										<img src="images/portfolio-img4.jpg" class="fluid-img" alt="portfolio img">
-										<div class="portfolio-overlay">
-											<h3 class="portfolio-item-title">UX Design</h3>
-											<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonumm.</p>
-										</div>
+								<div class="col-xs-4  form-group has-feedback">
+									<label>I left New Zealand temporarily</label>
+									<div class=" input-group date form_date" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+										<input id="leftDate" class="form-control" placeholder="DD/MM/YY" type="text" value="" required>
+										<span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
 									</div>
 								</div>
-								<div class="iso-box wordpress col-md-3 col-sm-3 col-xs-12">
-									<div class="portfolio-thumb">
-										<img src="images/portfolio-img5.jpg" class="fluid-img" alt="portfolio img">
-										<div class="portfolio-overlay">
-											<h3 class="portfolio-item-title">UX Design</h3>
-											<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonumm.</p>
-										</div>
-									</div>
-								</div>
-								<div class="iso-box html photoshop col-md-3 col-sm-3 col-xs-12">
-									<div class="portfolio-thumb">
-										<img src="images/portfolio-img6.jpg" class="fluid-img" alt="portfolio img">
-										<div class="portfolio-overlay">
-											<h3 class="portfolio-item-title">UX Design</h3>
-											<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonumm.</p>
-										</div>
-									</div>
-								</div>
-								<div class="iso-box photoshop col-md-3 col-sm-3 col-xs-12">
-									<div class="portfolio-thumb">
-										<img src="images/portfolio-img7.jpg" class="fluid-img" alt="portfolio img">
-										<div class="portfolio-overlay">
-											<h3 class="portfolio-item-title">UX Design</h3>
-											<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonumm.</p>
-										</div>
-									</div>
-								</div>
-								<div class="iso-box wordpress col-md-3 col-sm-3 col-xs-12">
-									<div class="portfolio-thumb">
-										<img src="images/portfolio-img8.jpg" class="fluid-img" alt="portfolio img">
-										<div class="portfolio-overlay">
-											<h3 class="portfolio-item-title">UX Design</h3>
-											<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonumm.</p>
-										</div>
+								<div class="col-xs-4  form-group has-feedback">
+									<label> I returned to New Zealand </label>
+									<div class=" input-group date form_date" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+										<input id="returnDate" class="form-control" placeholder="DD/MM/YY" type="text" value="" required>
+										<span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
+					<hr style="width:100%; border-color:#bdc3c7;" />
+					<div class="row col-xs-12" style="margin-top:2%">
+						<span style="font-size:15px;color:#663333">Please check the other types of income listed and confirm if your income from 1 April 2010 to 31 March 2015 has only been from salary, wages, and/or government benefits (family assistance, student allowance, pension, ACC, etc.)</span>
+						<p style="margin-top:1%;font-size:15px;color:#663333">Other forms of income include: any income without tax deducted, interest, dividends, Maori Authority Distributions,
+							self-employed, trust income, income from partnerships, income from a shareholder salary, overseas income, rental properties
+							income, or LAQC/LTC losses or any prior year losses to claim.</p>
+					</div>
+					<div class="row" style="padding-top:4%">
+						<span class="col-xs-10" style="padding-top:4%">4. Have your got income other from salary, wages, and/or government benefits since 1 April 2010?<br><span style="color:gray">(If you have expenses to claim, ie. loss of earnings insurance, tax return preparation fee, commission on interest or dividend income and interest on money borrowed to buy shares, please select no from the above and we will be in touch.)</span></span>
+						<div class="btn-group dropdown " style="margin-left:3%;padding-top:4%">
+							<button class="btn btn-inverse  dropdown-toggle" type="button" data-toggle="dropdown">
+								-- Select -- <span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu dropdown-menu-inverse" role="menu" id="QTwoDropdown">
+								<li><a>Yes</a></li>
+								<li><a>No</a></li>
+							</ul>
+						</div>
+					</div>
+					<diiv  style="margin-top:1%" hidden>
+						<span class="row"> *Extra Income Sources</span>
+						<div class="col-md-6 col-sm-6">
+							<label class="checkbox formInputMagin" for="interst200">
+								<input type="checkbox" data-toggle="checkbox" value="" id="interst200" required> <strong> I have received Interest over $200</strong>
+								<br>
+							</label>
+							<label class="checkbox formInputMagin" for="dividend200">
+								<input type="checkbox" data-toggle="checkbox" value="" id="dividend200" required> <strong> I have received dividends over $200</strong>
+								<br>
+							</label>
+							<label class="checkbox formInputMagin" for="maori200">
+								<input type="checkbox" data-toggle="checkbox" value="" id="maori200" required> <strong>I have received Māori Authority Distribution over $200</strong>
+								<br>
+							</label>
+							<label class="checkbox formInputMagin" for="selfEmploy">
+								<input type="checkbox" data-toggle="checkbox" value="" id="selfEmploy" required> <strong> I am self-employed</strong>
+								<br>
+							</label>
+							<label class="checkbox formInputMagin" for="inPartnership">
+								<input type="checkbox" data-toggle="checkbox" value="" id="inPartnership" required> <strong>I am in a partnership</strong>
+								<br>
+							</label>
+							<label class="checkbox formInputMagin" for="shareholder">
+								<input type="checkbox" data-toggle="checkbox" value="" id="shareholder" required> <strong>  I receive income from a shareholder salary</strong>
+								<br>
+							</label>
+							<label class="checkbox formInputMagin" for="laqcClaim">
+								<input type="checkbox" data-toggle="checkbox" value="" id="laqcClaim" required> <strong>I have LAQC/LTC losses to claim</strong>
+								<br>
+							</label>
+						</div>
+						<div class="col-md-6 col-sm-6">
+							<label class="checkbox formInputMagin" for="priorClaim">
+								<input type="checkbox" data-toggle="checkbox" value="" id="priorClaim" required> <strong> I have prior year losses to claim</strong>
+								<br>
+							</label>
+							<label class="checkbox formInputMagin" for="overseasIncome">
+								<input type="checkbox" data-toggle="checkbox" value="" id="overseasIncome" required> <strong>I have overseas income</strong>
+								<br>
+							</label>
+							<label class="checkbox formInputMagin" for="rentalProperty">
+								<input type="checkbox" data-toggle="checkbox" value="" id="rentalProperty" required> <strong>  I have a rental property</strong>
+								<br>
+							</label>
+							<label class="checkbox formInputMagin" for="expenseClaim">
+								<input type="checkbox" data-toggle="checkbox" value="" id="expenseClaim" required> <strong>  I have expenses to claim</strong>
+								<br>
+							</label>
+							<label class="checkbox formInputMagin" for="lossInsurance">
+								<input type="checkbox" data-toggle="checkbox" value="" id="lossInsurance" required> <strong>Loss of earnings insurance</strong>
+								<br>
+							</label>
+							<label class="checkbox formInputMagin" for="commissionIncome">
+								<input type="checkbox" data-toggle="checkbox" value="" id="commissionIncome" required> <strong>Commission on Interest or dividend income</strong>
+								<br>
+							</label>
+							<label class="checkbox formInputMagin" for="buyShare">
+								<input type="checkbox" data-toggle="checkbox" value="" id="buyShare" required> <strong> Interest on money borrowed to buy shares</strong>
+								<br>
+							</label>
+						</div>
+					</diiv>
+
+					<div class="row" >
+						<span class="col-xs-10" style="margin-top:3%">5. Would you like your refunds paid into your bank account ? *<br><span style="color:gray">(please provide your bank details ，otherwise, we will post you a cheque)</span></span>
+						<div class="btn-group dropdown " style="margin-left:3%">
+							<button class="btn btn-inverse  dropdown-toggle" type="button" data-toggle="dropdown">
+								-- Select -- <span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu dropdown-menu-inverse" role="menu" id="QSevenDropdown">
+								<li><a>Yes</a></li>
+								<li><a>No</a></li>
+							</ul>
+						</div>
+					</div>
+					<form data-toggle="validator" role="form" hidden>
+						<div class="row">
+							<div class="col-xs-6 form-group hasfeedback">
+								<input type="text" id="accountName" class="form-control" placeholder="Accound Name *" required />
+								<span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+								<span class="help-block with-errors"></span>
+							</div>
+							<div class="col-xs-6 form-group hasfeedback">
+								<input type="text" pattern="^\d{16}$" id="accountNumber" class="form-control" placeholder="Bank Account Number *" required
+								/>
+								<span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+								<span class="help-block with-errors"></span>
+							</div>
+						</div>
+					</form>
 				</div>
-			</div>
-		</div>
+				<div style="margin-left:45%;width:100%;margin-top:3%">
+					<button class="btn btn-info smoothScroll tm-view-more-btn" id="stepTwoBtn" style="width:10%">Submit</button>
+				</div>
 	</section>
 	<!-- END PORTFOLIO -->
-
-	<!-- START RESUME -->
-	<section id="resume" class="tm-padding-top-bottom-100">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-6 col-sm-6">
-					<h2 class="title">My <strong>Profile</strong></h2>
-					<p><span class="tm-info-label">Name</span> John White</p>
-					<p><span class="tm-info-label">Birthday</span> December 24, 1996</p>
-					<p><span class="tm-info-label">Address</span> Melbourne Victoria 3000 Australia</p>
-					<p><span class="tm-info-label">Phone</span> +001 020 0340 | 009 080 0760</p>
-					<p><span class="tm-info-label">Email</span> hello@company.com</p>
-					<p><span class="tm-info-label">Website</span> <a href="#" class="tm-red-text">www.company.com</a></p>
-				</div>
-				<div class="col-md-6 col-sm-6">
-					<h2 class="title"><strong>Some</strong> Skills</h2>
-					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet. Dolore
-						magna aliquam erat volutpat.</p>
-					<h4 class="tm-progress-label">Bootstrap <small class="progress-percent-small">100%</small></h4>
-					<div class="progress tm-progress">
-						<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"
-						style="width: 100%;"></div>
-					</div>
-					<h4 class="tm-progress-label">HTML5 <small class="progress-percent-small">90%</small></h4>
-					<div class="progress tm-progress">
-						<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"
-						style="width: 90%;"></div>
-					</div>
-					<h4 class="tm-progress-label">SEO <small class="progress-percent-small">80%</small></h4>
-					<div class="progress tm-progress">
-						<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"
-						style="width: 80%;"></div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- END RESUME -->
-
 	<!-- START ABOUT -->
-	<section id="about" class="tm-about">
+	<section id="" class="tm-about">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-offset-6 col-md-6 col-sm-offset-6 col-sm-7">
@@ -282,17 +493,20 @@
 						<h2>This is <strong>me</strong></h2>
 						<h1 class="tm-red-text">Creative <strong>Director</strong></h1>
 					</div>
-					<p>This is free Bootstrap v3.3.4 mobile friendly layout from <a rel="nofollow" href="http://www.cssmoban.com" target="_parent">templatemo</a>.
+					<p>
+						This is free Bootstrap v3.3.4 mobile friendly layout from <a rel="nofollow" href="http://www.cssmoban.com" target="_parent">templatemo</a>.
 						Feel free to use it for your website. Credit goes to <a rel="nofollow" href="http://pixabay.com" target="_blank">Pixabay</a>						for photos used in this template. Dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing
-						elit, sed diam nonummy nibh euismod tincidunt ut laoreet.</p>
-					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet. Dolore
-						magna aliquam erat volutpat.</p>
+						elit, sed diam nonummy nibh euismod tincidunt ut laoreet.
+					</p>
+					<p>
+						Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet. Dolore magna
+						aliquam erat volutpat.
+					</p>
 				</div>
 			</div>
 		</div>
 	</section>
 	<!-- END ABOUT -->
-
 	<!-- START SOCIAL -->
 	<section id="social" class="tm-social">
 		<div class="container">
@@ -336,13 +550,13 @@
 						</a>
 					</div>
 				</div>
+
 			</div>
 		</div>
 	</section>
 	<!-- END SOCIAL -->
-
 	<!-- START CONTACT -->
-	<section id="contact" class="tm-contact">
+	<section id="" class="tm-contact">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
@@ -375,8 +589,12 @@
 		</div>
 	</section>
 	<!-- END CONTACT -->
-	<script src="js/jquery.js"></script>
-	<script src="js/bootstrap.min.js"></script>
+
+	<script src="js/bootstrap.js"></script>
+	<script src="js/jquery-2.1.4.min.js"></script>
+	<script src="js/flat-ui.js"></script>
+	<script src="js/bootstrap-datetimepicker.js"></script>
+	<script src="js/validator.js"></script>
 	<script src="js/smoothscroll.js"></script>
 	<script src="js/jquery.nav.js"></script>
 	<script src="js/isotope.js"></script>
